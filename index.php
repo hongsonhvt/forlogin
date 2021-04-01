@@ -11,7 +11,6 @@
       $sql ="SELECT * FROM account WHERE _username='$uname' AND _password='$psw'";
       $query = pg_query($dbconn,$sql); 
       $check = pg_num_rows($query);
-      var_dump($check);
       if($check == 1){ 
           echo "Dang nhap thanh cong";    
       }else{
