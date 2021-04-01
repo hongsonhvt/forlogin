@@ -1,16 +1,17 @@
 <?php 
   $conn_string = "host=ec2-107-22-245-82.compute-1.amazonaws.com port=5432 dbname=dblr3jfptdp8j7 user=pvfajqlsrmxhad password=a0f8e8b6e7a723bda1733a7657ab23a7a9263892e9f3a1023586cec44c50c028";
   $dbconn = pg_connect($conn_string);
-  if ($dbconn) {
-      echo "ok";
+  if (!$dbconn) {
+      echo "lost connection";
   }
   if(isset($_POST['submit'])){
       $uname = $_POST['uname'];
       $psw = $_POST['psw'];
-
+      
       $sql ="SELECT * FROM account WHERE _username='$uname' AND _password='$psw'";
       $query = pg_query($dbconn,$sql); 
       $check = pg_num_rows($data);
+      var_dump($check);
       if($check == 1){ 
           echo "Dang nhap thanh cong";    
       }else{
