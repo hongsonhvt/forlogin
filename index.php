@@ -1,8 +1,8 @@
 <?php 
   $conn_string = "host=ec2-107-22-245-82.compute-1.amazonaws.com port=5432 dbname=dblr3jfptdp8j7 user=pvfajqlsrmxhad password=a0f8e8b6e7a723bda1733a7657ab23a7a9263892e9f3a1023586cec44c50c028";
   $dbconn = pg_connect($conn_string);
-  if (!$dbconn) {
-      echo "An error occurred";
+  if ($dbconn) {
+      echo "ok";
   }
   if(isset($_POST['submit'])){
       $uname = $_POST['uname'];
