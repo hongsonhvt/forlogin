@@ -22,6 +22,7 @@
 <html lang="en">
 <head>
   <title>PHP PostgreSQL Registration & Login Example </title>
+  <link rel="icon" href="https://accounts.scdn.co/sso/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico">
 </head>
 <style type="text/css">
   /* Bordered form */
